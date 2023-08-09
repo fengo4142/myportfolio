@@ -8,8 +8,8 @@ import { NAV_ITEMS } from 'src/app/app.constants';
 })
 export class MpNavbarComponent {
   public navigationItems;
+
   constructor() {
     this.navigationItems = NAV_ITEMS;
-    console.log(this.navigationItems, "-----")
   }
 }

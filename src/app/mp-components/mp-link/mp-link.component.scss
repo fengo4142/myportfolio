@@ -1,0 +1,10 @@
+.mp-link {
+  text-decoration: none;
+  color: white;
+  margin-right: 8px;
+
+  &:hover {
+    color: black;
+    text-decoration: underline;
+  }
+}
