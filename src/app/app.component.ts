@@ -26,6 +26,7 @@ export class AppComponent implements OnInit, AfterViewInit {
         getSpeed: true,
         getDirection: true,
       });
+      console.log(this.scroll,)
     }
   }
 

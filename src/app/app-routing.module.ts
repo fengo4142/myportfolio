@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './views/home/home.component';
-import { BasicInfoComponent } from './views/basic-info/basic-info.component';
-import { PortfoliosComponent } from './views/portfolios/portfolios.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
@@ -11,11 +9,13 @@ const routes: Routes = [
   },
   {
     path: 'basic-info',
-    component: BasicInfoComponent,
+    loadChildren: () =>
+      import('./basic-info/basic-info.module').then((m) => m.BasicInfoModule),
   },
   {
     path: 'portfolios',
-    component: PortfoliosComponent,
+    loadChildren: () =>
+      import('./portfolios/portfolios.module').then((m) => m.PortfoliosModule),
   },
   {
     path: '**',

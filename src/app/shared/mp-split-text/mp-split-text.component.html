@@ -1,0 +1,21 @@
+<span
+  *ngFor="let word of getWords(); let i = index"
+  class="text__splitting-word inline-block"
+  [ngStyle]="{ '--word-index': i + 1 }"
+>
+  <ng-container *ngIf="type === splitTextTypes.Char; else wordTemplate">
+    <span
+      *ngFor="let char of word.split(''); let j = index"
+      class="text__splitting-char relative inline-block"
+      [ngStyle]="{
+        '--char-index': getCharIndex(i, j)
+      }"
+    >
+      {{ char }}
+    </span>
+  </ng-container>
+  <ng-template #wordTemplate>
+    {{ word }}
+  </ng-template>
+  <span *ngIf="i !== getWords().length - 1" class="whitespace">&nbsp;</span>
+</span>

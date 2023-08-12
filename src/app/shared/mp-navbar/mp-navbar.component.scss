@@ -2,7 +2,7 @@
   flex: 1;
 }
 .toolbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -12,6 +12,7 @@
   background-color: #1976d2;
   color: white;
   font-weight: 600;
+  z-index: 1;
 }
 
 .toolbar img {

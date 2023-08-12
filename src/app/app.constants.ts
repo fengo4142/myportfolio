@@ -1,6 +1,6 @@
 export const NAV_ITEMS = [
   {
-    title: 'Basic Info',
+    title: 'Who we are',
     link: '/basic-info',
     iconSvg: '',
     roles: [],
